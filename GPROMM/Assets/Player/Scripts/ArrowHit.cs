@@ -51,6 +51,8 @@ public class ArrowHit : MonoBehaviour
     {
         if (other.CompareTag("enemy"))
         {
+            //this is how we will modify damage based on player stats
+          //  other.gameObject.GetComponent<enemyScript>().health -= Player.instance.dexterity * Player.instance.damage;
             ParticleSystem tempParticle =  Instantiate(hitEffect, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z),Quaternion.identity);
             Destroy(tempParticle.gameObject, .3f);
             Destroy(gameObject);

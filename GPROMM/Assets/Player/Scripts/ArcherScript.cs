@@ -16,7 +16,9 @@ public class ArcherScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        Player.instance.playerClass = 3;
+        Player.instance.createCharacter();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class ArcherScript : MonoBehaviour
     {
         if(archerAnim.GetCurrentAnimatorStateInfo(0).IsTag("lAttack") && _trackarrow == false)
         {
+            archerAnim.speed = archerAnim.speed - Player.instance.dexterity * .01f;
             print("has caught it");
             GameObject arrowTemp;
 
@@ -39,7 +42,7 @@ public class ArcherScript : MonoBehaviour
 
     IEnumerator wait()
     {
-       yield return new WaitForSeconds(1f);
+       yield return new WaitForSeconds(.5f);
         _trackarrow = false;
     }
 
