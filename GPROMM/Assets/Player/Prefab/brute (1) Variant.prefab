@@ -113,7 +113,20 @@ CapsuleCollider:
   m_Height: 2.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.25, z: 0}
---- !u!114 &549372612
+--- !u!114 &549372615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4067060465925365151}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cineBrain: {fileID: 0}
+--- !u!114 &500903997224892466
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4067060465925365151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
+  m_Script: {fileID: 11500000, guid: 122a5923fba52d54b90d3b43122bbd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
@@ -133,7 +146,7 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.1
---- !u!114 &549372615
+--- !u!114 &1908545002341623210
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,9 +155,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4067060465925365151}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e9d8698bbf9053418d4ae1976d42014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1824360383
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7299025467960379712}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.33
+  m_Height: 1.8
+  m_Direction: 2
+  m_Center: {x: 1.1751639, y: 1.6663177, z: 0.21686289}
 --- !u!136 &998278425
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -173,20 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 5331122394556157832, guid: abfd2c176ec15a0418657abcb1d40b5b,
     type: 3}
---- !u!136 &1824360383
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7299025467960379712}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  m_Radius: 0.33
-  m_Height: 1.8
-  m_Direction: 2
-  m_Center: {x: 1.1751639, y: 1.6663177, z: 0.21686289}
 --- !u!1001 &5427106812707685526
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -272,7 +285,12 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: b76ab601721bcda4ca1d39488b0e5ca1,
         type: 3}
       propertyPath: m_Name
-      value: brute (1)
+      value: brute (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: b76ab601721bcda4ca1d39488b0e5ca1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3322438376204111318, guid: b76ab601721bcda4ca1d39488b0e5ca1,
         type: 3}

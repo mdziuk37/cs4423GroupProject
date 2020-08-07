@@ -20,6 +20,9 @@ public class CameraScript : MonoBehaviour
     {
         _ztarget = _ztargetCamera.GetComponent<Cinemachine.CinemachineVirtualCamera>();
         _thirdPerson = _thirdPersonCamera.GetComponent<Cinemachine.CinemachineFreeLook>();
+        _thirdPerson.Follow = GameObject.FindGameObjectWithTag("Player").transform;
+        _thirdPerson.LookAt = GameObject.FindGameObjectWithTag("Player").transform;
+        _ztarget.Follow = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class CameraScript : MonoBehaviour
             _thirdPerson.Priority = 10;
             _ztarget.Priority = 1;
         }
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab) && GameObject.FindGameObjectsWithTag("enemy").Length>0)
         {
             int temp = _thirdPerson.Priority;
             _thirdPerson.Priority = _ztarget.Priority;

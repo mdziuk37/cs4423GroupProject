@@ -32,7 +32,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenuManager : MonoBehaviour
 {
     private Canvas _menu;
-    public Camera firstPersonCamera;
+    [SerializeField]
+    Camera firstPersonCamera;
     
     // Start is called before the first frame update
     void Start()
@@ -41,7 +42,7 @@ public class PauseMenuManager : MonoBehaviour
         _menu.enabled = false;
         // Just in case player does Pause->Exit->Start Game because it WILL stay at timeScale = 0.0f
         Time.timeScale = 1.0f; 
-        //firstPersonCamera = gameObject.Find("FirstPersonCharacter").GetComponent(m_MouseLook);
+       // firstPersonCamera = GameObject.Find("FirstPersonCharacter").GetComponent(m_MouseLook);
     }
 
     
@@ -57,6 +58,7 @@ public class PauseMenuManager : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0.0f;
+                
             }
             else
             {
