@@ -30,6 +30,8 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+
+
         if (instance)
         {
             Debug.LogError("More than one Player in scene");
@@ -40,6 +42,21 @@ public class Player : MonoBehaviour
 
 
         }
+
+
+        if(gameObject.name == "Brute (1)")
+        {
+            playerClass = 1;
+        }
+        if(gameObject.name == "")
+        {
+            Debug.Log("no Character");
+
+        }
+        playerClass = 1;
+
+        createCharacter();
+
     }
 
     // use the menu to update the player class and then run create character
@@ -48,10 +65,11 @@ public class Player : MonoBehaviour
         //brute starting stats
          if(playerClass == 1)
             {
-            maxHealth = 150;
+            maxHealth = 250;
             strength = 5;
             wisdom = 1;
             dexterity =3;
+            damage = 50;
             }
          //wizard starting stats
         if (playerClass == 2)
@@ -60,6 +78,7 @@ public class Player : MonoBehaviour
             strength = 1;
             wisdom = 5;
             dexterity = 3;
+            damage = 30;
         }
 
         //archer starting stats
@@ -69,6 +88,7 @@ public class Player : MonoBehaviour
             strength = 1;
             wisdom = 3;
             dexterity = 5;
+            damage = 25;
         }
 
 
