@@ -68,6 +68,7 @@
     <Compile Include="Assets\Player\Scripts\ArrowHit.cs" />
     <Compile Include="Assets\Player\Scripts\AttackHitAxe.cs" />
     <Compile Include="Assets\Player\Scripts\CharacterStats.cs" />
+    <Compile Include="Assets\Player\Scripts\EnablePlayers.cs" />
     <Compile Include="Assets\Player\Scripts\MageScript.cs" />
     <Compile Include="Assets\Player\Scripts\MissleHit.cs" />
     <Compile Include="Assets\Player\Scripts\MoveForward.cs" />

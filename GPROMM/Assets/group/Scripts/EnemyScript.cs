@@ -48,11 +48,11 @@ public class EnemyScript : MonoBehaviour
         anim = GetComponent<Animator>();
         
     }
-    private void Awake()
+   /* private void Awake()
     {
         GetComponentInParent<Health>().onHealthPctChange += HandleHealthChange;
     }
-
+    */
     void Update()
     {
 

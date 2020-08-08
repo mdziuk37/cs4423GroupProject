@@ -38,7 +38,7 @@ public class PauseMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _menu = GetComponent<Canvas>();
+        _menu = GetComponentInParent<Canvas>();
         _menu.enabled = false;
         // Just in case player does Pause->Exit->Start Game because it WILL stay at timeScale = 0.0f
         Time.timeScale = 1.0f; 
