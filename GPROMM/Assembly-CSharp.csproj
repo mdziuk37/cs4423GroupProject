@@ -196,6 +196,7 @@
     <Compile Include="Assets\Scripts\PauseMenuManager.cs" />
     <Compile Include="Assets\Scripts\TitleScreenBehavior.cs" />
     <Compile Include="Assets\group\Scripts\EnemyScript.cs" />
+    <Compile Include="Assets\group\Scripts\Health.cs" />
     <None Include="Assets\Player\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
     <None Include="Assets\Player\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
     <None Include="Assets\Player\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />

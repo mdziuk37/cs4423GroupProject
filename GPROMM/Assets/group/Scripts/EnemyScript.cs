@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
     private GameObject Enemy;
     private int select;
     [SerializeField] public int Health;
+
+    public int maxHealth = 100;
     
     [FormerlySerializedAs("distance")] 
     [SerializeField] private float distanceToTarget;
@@ -23,10 +26,13 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private Animator anim;
     
     [SerializeField] private float attackCoolDown, lastAttackTime;
+   
 
+    [SerializeField]
+    private Image foreGroundImage;
 
-
-
+    [SerializeField]
+    private float updateSpeedSeconds = 0f;
 
     void Start()
     {
@@ -42,7 +48,10 @@ public class EnemyScript : MonoBehaviour
         anim = GetComponent<Animator>();
         
     }
-
+    private void Awake()
+    {
+        GetComponentInParent<Health>().onHealthPctChange += HandleHealthChange;
+    }
 
     void Update()
     {
@@ -140,6 +149,8 @@ public class EnemyScript : MonoBehaviour
         if(other.tag == "Player")
         {
 
+            float currentHealthPct = (float)Health / (float)maxHealth;
+            //onHealthPctChange(currentHealthPct);
         }
         if(other.tag == "weapon")
         {
@@ -149,6 +160,25 @@ public class EnemyScript : MonoBehaviour
         }
     }
 
+    private IEnumerator changeToPct(float Pct)
+    {
+        float preChange = foreGroundImage.fillAmount;
+        float elapsed = 0f;
+
+        while (elapsed < updateSpeedSeconds)
+        {
+            elapsed += Time.deltaTime;
+            foreGroundImage.fillAmount = Mathf.Lerp(preChange, Pct, elapsed / updateSpeedSeconds);
+            yield return null;
+        }
+
+        foreGroundImage.fillAmount = Pct;
+    }
+
+    private void HandleHealthChange(float Pct)
+    {
+        StartCoroutine(changeToPct(Pct));
+    }
 
 }
     

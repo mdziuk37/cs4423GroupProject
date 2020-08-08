@@ -9,6 +9,7 @@ TagManager:
   - freelook
   - UI
   - enemyWeapon
+  - healthCanvas
   layers:
   - Default
   - TransparentFX
