@@ -28,6 +28,8 @@ public class Player : MonoBehaviour
 
     public Player player;
 
+    public int health;
+
     private void Awake()
     {
 
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour
         }
 
 
-        if(gameObject.name == "Brute (1)")
+        if(gameObject.name == "brute (1)")
         {
             playerClass = 1;
         }
@@ -53,7 +55,7 @@ public class Player : MonoBehaviour
             Debug.Log("no Character");
 
         }
-        playerClass = 1;
+       // playerClass = 1;
 
         createCharacter();
 
@@ -91,7 +93,7 @@ public class Player : MonoBehaviour
             damage = 25;
         }
 
-
+        health = maxHealth;
     }
 
 

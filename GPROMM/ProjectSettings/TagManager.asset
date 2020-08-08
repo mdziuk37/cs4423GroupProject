@@ -8,6 +8,7 @@ TagManager:
   - weapon
   - freelook
   - UI
+  - enemyWeapon
   layers:
   - Default
   - TransparentFX

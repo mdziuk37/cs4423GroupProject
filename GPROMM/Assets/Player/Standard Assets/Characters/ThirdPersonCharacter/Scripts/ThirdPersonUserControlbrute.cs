@@ -52,6 +52,14 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             else{
                 anim.SetBool("lAttack", false);
             }
+
+            //player is dead
+            if (Player.instance.health <= 0)
+            {
+                Debug.Log("player is dead");
+                anim.SetBool("dead",true);
+                //pause and restart level
+            }
         }
 
 
@@ -84,5 +92,16 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             m_Character.Move(m_Move, crouch, m_Jump);
             m_Jump = false;
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "enemyWeapon")
+            {
+                Player.instance.health -= 10;
+            }
+        }
+        
     }
+
+   
 }
