@@ -13,6 +13,9 @@ TagManager:
   - UI
   - Enemy1HealthBar
   - Enemy2HealthBar
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   layers:
   - Default
