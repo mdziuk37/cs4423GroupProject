@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< Updated upstream
   tags: []
+=======
+  tags:
+  - enemy
+  - weapon
+  - freelook
+  - UI
+  - Enemy1HealthBar
+  - Enemy2HealthBar
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
