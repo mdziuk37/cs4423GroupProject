@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:GPROMM/Assets/Enemies/Models & Animations.meta
+guid: ba42e676a3d39394ebdbfbb03dd9a1a6
+=======
 guid: 1288d624e111f5145a7bfc72ce407fdb
+>>>>>>> master:GPROMM/Assets/Enemies/NavMeshComponents-master.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

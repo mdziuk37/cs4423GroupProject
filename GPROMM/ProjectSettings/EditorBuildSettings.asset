@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UI-TitleScreen.unity
+    guid: f2830cf6bce7fee46bf223a6f5167f91
+  - enabled: 1
+    path: Assets/Scenes/UI-AboutScreen.unity
+    guid: 2a3a958a47973564bb825b04f480d393
+  - enabled: 1
+    path: Assets/Scenes/UI-CreditScreen.unity
+    guid: 26b4190ceae489d4cb4ace7e570dd7e6
+  - enabled: 1
+    path: Assets/Scenes/UI-OptionsScreen.unity
+    guid: b394ff8304be49740bdeeb2b87c54f6b
+  - enabled: 1
+    path: Assets/Scenes/Act2 (InGame).unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
