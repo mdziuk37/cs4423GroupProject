@@ -3,14 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+  tags: []
+=======
+>>>>>>> master
   tags:
   - enemy
   - weapon
   - freelook
   - UI
+<<<<<<< HEAD
   - enemyWeapon
   - healthCanvas
   - pauseMenu
+=======
+  - Enemy1HealthBar
+  - Enemy2HealthBar
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> master
   layers:
   - Default
   - TransparentFX

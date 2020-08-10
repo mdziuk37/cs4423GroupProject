@@ -6,6 +6,10 @@ public class AttackHitAxe : MonoBehaviour
 {
 
     private Collider weapon;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> master
     [SerializeField]
     private ParticleSystem hitEffect;
     // Start is called before the first frame update
@@ -28,6 +32,13 @@ public class AttackHitAxe : MonoBehaviour
             ParticleSystem tempParticle =  Instantiate(hitEffect, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z),Quaternion.identity);
             Destroy(tempParticle.gameObject, .3f);
             
+<<<<<<< HEAD
+=======
+            
+            //For healthbar
+            other.GetComponent<EnemyBehaviour>().Health -= 10;
+            other.GetComponent<EnemyBehaviour>().gettingHit = true;
+>>>>>>> master
         }
     }
 }
